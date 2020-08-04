@@ -21,7 +21,9 @@ class Post < ActiveRecord::Base
   end
 
   def email_author_about_post
-  end 
+    # For more information: https://guides.rubyonrails.org/action_mailer_basics.html
+
+  end
 
 # make sure validation always passes vefore every save
 # rails to run our title-case algorithm on the title of the Post
