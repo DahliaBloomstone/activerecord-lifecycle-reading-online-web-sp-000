@@ -22,7 +22,6 @@ class Post < ActiveRecord::Base
 
   def email_author_about_post
     # For more information: https://guides.rubyonrails.org/action_mailer_basics.html
-
   end
 
 # make sure validation always passes vefore every save
