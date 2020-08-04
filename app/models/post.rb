@@ -23,3 +23,5 @@ class Post < ActiveRecord::Base
 end
 
 #We'd expect that whenever Rails persists Post models to the database, (so #save and #create) this code will get run.
+#bundle exec rails c (console):
+# p = Post.create(title: "testing")
