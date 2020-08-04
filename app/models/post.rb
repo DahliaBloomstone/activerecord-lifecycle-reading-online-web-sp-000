@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 
   belongs_to :author
-  validate :is_title_case 
+  validate :is_title_case
 
   private
 
@@ -11,6 +11,8 @@ class Post < ActiveRecord::Base
     end
   end
 
+# make sure validation always passes vefore every save
+# rails to run our title-case algorithm on the title of the Post 
   def make_title_case
     self.title = self.title.titlecase
   end
