@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   validate :is_title_case
 
   # New Code!!
+  # before_save is called after validation occurs.
     before_save :make_title_case
 
   private
@@ -25,4 +26,4 @@ end
 #We'd expect that whenever Rails persists Post models to the database, (so #save and #create) this code will get run.
 #bundle exec rails c (console):
 # p = Post.create(title: "testing")
-# p.valid? => false, it wasn't saved to the database 
+# p.valid? => false, it wasn't saved to the database
