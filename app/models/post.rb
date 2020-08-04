@@ -9,6 +9,7 @@ class Post < ActiveRecord::Base
     before_validation :make_title_case #happens before validation, title cases the title then the validation runs
 
   # actions that need to occur that aren't modifying the model itself
+  # whenever you save to the database, send an email to the Author alerting them the post was saved 
     before_save :email_author_about_post
 
 
