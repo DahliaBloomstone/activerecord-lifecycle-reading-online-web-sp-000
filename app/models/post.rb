@@ -21,3 +21,5 @@ class Post < ActiveRecord::Base
     self.title = self.title.titlecase
   end
 end
+
+#We'd expect that whenever Rails persists Post models to the database, (so #save and #create) this code will get run.
