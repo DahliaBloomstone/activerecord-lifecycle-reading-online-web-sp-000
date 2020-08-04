@@ -4,8 +4,9 @@ class Post < ActiveRecord::Base
   validate :is_title_case
 
   # New Code!!
-  # before_save is called after validation occurs.
-    before_save :make_title_case
+  # before_save is called after validation occurs:
+  # before_save :make_title_case
+    before_validation :make_title_case
 
   private
   def is_title_case
