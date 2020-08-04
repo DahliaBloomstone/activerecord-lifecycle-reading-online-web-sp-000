@@ -20,6 +20,9 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def email_author_about_post 
+  end 
+
 # make sure validation always passes vefore every save
 # rails to run our title-case algorithm on the title of the Post
 # to make sure all of our Posts have the correctly formatted title, we are going to run make_title_case during the first of the available lifecycle points
